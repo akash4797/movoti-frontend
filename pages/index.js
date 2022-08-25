@@ -72,9 +72,11 @@ export default function Home({ user }) {
             asperiores numquam commodi quidem?
           </span>
           <div className="flex gap-3">
-            <button className="p-3 hover:bg-red-900 bg-red-800 mt-3 font-semibold uppercase">
+            <Link href={"/movies"}>
+            <a className="p-3 hover:bg-red-900 bg-red-800 mt-3 font-semibold uppercase">
               View Shows
-            </button>
+            </a>
+            </Link>
             {user ? null : (
               <Link href={"/signup"}>
                 <a className="p-3 border-2 border-red-800 mt-3 font-semibold uppercase">
@@ -122,9 +124,11 @@ export default function Home({ user }) {
                         </span>
                       </div>
                       <div className="absolute bottom-0 rounded-b-lg w-full bg-stone-800 p-3 bg-blend-overlay bg-opacity-75 flex justify-around items-center">
-                        <button className="bg-red-800 text-white p-2 rounded">
-                          View Details
-                        </button>
+                        <Link href={"/movies/" + movie.id}>
+                          <a className="bg-red-800 text-white p-2 rounded">
+                            View Details
+                          </a>
+                        </Link>
                         <button
                           className="bg-red-800 text-white p-2 rounded"
                           onClick={() => addItemHandler(movie)}
@@ -178,9 +182,11 @@ export default function Home({ user }) {
                         </span>
                       </div>
                       <div className="absolute rounded-b-lg bottom-0 w-full bg-stone-800 p-3 bg-blend-overlay bg-opacity-75 flex justify-around items-center">
-                        <button className="bg-red-800 text-white p-2 rounded">
-                          View Details
-                        </button>
+                        <Link href={"/movies/" + movie.id}>
+                          <a className="bg-red-800 text-white p-2 rounded">
+                            View Details
+                          </a>
+                        </Link>
                         <button
                           className="bg-red-800 text-white p-2 rounded"
                           onClick={() => addItemHandler(movie)}

@@ -25,9 +25,9 @@ export default function Layout({ children, size, user }) {
           {user ? (
             <>
               <button className="text-white hover:text-red-800">Search</button>
-              <button className="text-white hover:text-red-800">
-                View Movies
-              </button>
+              <Link href={"/movies"}>
+                <a className="text-white hover:text-red-800">View Movies</a>
+              </Link>
               <Link href={"/account"}>
                 <a
                   className={`${
@@ -61,9 +61,9 @@ export default function Layout({ children, size, user }) {
           ) : (
             <>
               <button className="text-white hover:text-red-800">Search</button>
-              <button className="text-white hover:text-red-800">
-                View Movies
-              </button>
+              <Link href={"/movies"}>
+                <a className="text-white hover:text-red-800">View Movies</a>
+              </Link>
               <Link href={"/login"}>
                 <a className="text-white hover:text-red-800">Login</a>
               </Link>
